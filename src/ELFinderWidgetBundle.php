@@ -1,6 +1,6 @@
 <?php
 
-namespace App\CaptJM\ELFinderWidgetBundle\src;
+namespace CaptJM\ELFinderWidgetBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
