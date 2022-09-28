@@ -1,0 +1,19 @@
+{% block elfinder_widget %}
+    <div class="elfinder-widget d-flex" data-id="{{ id }}" data-path="{{ path('elfinder', {'instance': instance, 'homeFolder': homeFolder }) }}">
+        {% set html_id = 'ea-lightbox-' ~ id %}
+        {% if not value %}{% set src = 'build/images/no-image.svg' %}{% else %}{% set src = value %}{% endif %}
+        <div class="w-25">
+            <a href="#" class="ea-lightbox-thumbnail" data-ea-lightbox-content-selector="#{{ html_id }}">
+                <img id="{{ id ~ 'thumbnail' }}" src="{{ asset(src) }}" class="img-fluid w-100" alt="">
+            </a>
+        </div>
+        <div id="{{ html_id }}" class="ea-lightbox">
+            <img src="{{ asset(src) }}" alt="">
+        </div>
+        <div class="w-75 ms-4 d-flex flex-column">
+            <input type="text" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}
+                   data-type="elfinder-input-field"/>
+            <div class="btn mt-4 w-25 browse-btn">Browse</div>
+        </div>
+    </div>
+{% endblock %}

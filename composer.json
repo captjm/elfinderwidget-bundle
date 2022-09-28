@@ -1,0 +1,37 @@
+{
+  "name": "captjm/elfinderwidget-bundle",
+  "type": "symfony-bundle",
+  "description": "",
+  "keywords": ["backend", "admin"],
+  "homepage": "",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David Makaridze",
+      "homepage": "https://github.com/captjm"
+    }
+  ],
+  "require": {
+    "php": ">=8.0.2",
+    "symfony/config": "^5.4|^6.0",
+    "symfony/twig-bundle": "^5.4|^6.0"
+  },
+  "require-dev": {
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "symfony/flex": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\CaptJM\\ELFinderWidgetBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\CaptJM\\ELFinderWidgetBundle\\Tests\\": "tests/"
+    }
+  }
+}
