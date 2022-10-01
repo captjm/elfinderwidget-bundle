@@ -4,6 +4,7 @@
   "description": "",
   "keywords": ["backend", "admin"],
   "license": "MIT",
+  "version": "v1.0.0",
   "authors": [
     {
       "name": "David Makaridze",
